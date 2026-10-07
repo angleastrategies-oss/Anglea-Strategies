@@ -435,12 +435,13 @@ footer img{width:84px;height:84px;border-radius:50%}
         status.className = "status ok-box";
         status.innerHTML = "<strong>Request sent.</strong><span>Thanks, " + escapeHtml(name.split(" ")[0]) + ". Ethan will reply to " + escapeHtml(email) + " within one business day.</span>";
         status.hidden = false; form.reset();
-      } else { throw new Error("not sent"); }
-    }).catch(function(){
+      } else { throw new Error((j && j.message) || "not sent"); }
+    }).catch(function(e){
       // Could not reach the form service (for example in a preview). Offer the message to send by email.
       var body = "Name: " + data.name + "\nBusiness: " + data.business + "\nEmail: " + data.email + "\nPhone: " + data.phone + "\nInterested in: " + data.services + "\n\n" + data.message;
       status.className = "status alt-box";
-      status.innerHTML = "<strong>The form could not send from here.</strong><span>Copy your message and email it to " + EMAIL + ", or call (406) 360-9604.</span><pre id=\"compose\"></pre><div style=\"display:flex;gap:.5rem;flex-wrap:wrap\"><button type=\"button\" class=\"small-btn\" id=\"copy-msg\">Copy message</button><a class=\"small-btn\" style=\"text-decoration:none\" href=\"mailto:" + EMAIL + "?subject=" + encodeURIComponent(data._subject) + "&body=" + encodeURIComponent(body) + "\">Open in email app</a></div>";
+      var why = (e && e.message && e.message !== "not sent" && !/fetch|network|load/i.test(e.message)) ? "<span>" + escapeHtml(e.message) + "</span>" : "";
+      status.innerHTML = "<strong>The form could not send from here.</strong>" + why + "<span>Copy your message and email it to " + EMAIL + ", or call (406) 360-9604.</span><pre id=\"compose\"></pre><div style=\"display:flex;gap:.5rem;flex-wrap:wrap\"><button type=\"button\" class=\"small-btn\" id=\"copy-msg\">Copy message</button><a class=\"small-btn\" style=\"text-decoration:none\" href=\"mailto:" + EMAIL + "?subject=" + encodeURIComponent(data._subject) + "&body=" + encodeURIComponent(body) + "\">Open in email app</a></div>";
       status.querySelector("#compose").textContent = body;
       status.hidden = false;
       document.getElementById("copy-msg").addEventListener("click", function(){
