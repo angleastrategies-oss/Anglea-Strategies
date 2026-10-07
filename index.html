@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://angleastrategies.com/">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0A1F33">
+<meta property="og:title" content="Anglea Strategies">
+<meta property="og:description" content="Local SEO, Google Business Profile management, and app development for local businesses. Hamilton, Montana.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://angleastrategies.com/">
+<meta property="og:image" content="https://angleastrategies.com/logo.png">
+<title>Anglea Strategies</title>
+<meta name="description" content="Anglea Strategies helps local businesses in Montana get found and booked: local SEO, Google Business Profile (GMB) management, and custom web and mobile app development. Based in Hamilton, MT.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Anglea Strategies","url":"https://angleastrategies.com","logo":"https://angleastrategies.com/logo.png","description":"Local SEO, Google Business Profile management, and app development for small businesses.","email":"angleastratgies@gmail.com","telephone":"+1-406-360-9604","address":{"@type":"PostalAddress","addressLocality":"Hamilton","addressRegion":"MT","addressCountry":"US"},"areaServed":["Bitterroot Valley","Missoula","Montana"],"founder":{"@type":"Person","name":"Ethan"},"knowsAbout":["Local SEO","Google Business Profile","App development"]}
+</script>
+<style>
+/* Layout: a field-survey page. Wide headline left, a "sample audit" sheet right; services as three
+   plates on one ruled line; process as a real 3-step sequence; contact as a two-column form. */
+:root{
+  /* Brand colors from the Anglea Strategies logo: navy wordmark, orange ring, red growth line */
+  --paper:#F4F6F9;      /* cool off-white tinted toward the navy */
+  --sheet:#FFFFFF;
+  --ink:#0A1F33;        /* logo navy */
+  --muted:#4D5D6F;
+  --rule:#D7DEE7;
+  --accent:#0A1F33;     /* primary buttons: navy */
+  --accent-ink:#FFFFFF;
+  --orange:#FF4F28;     /* logo ring, for large type, rules and marks */
+  --orange-text:#C63A16;/* readable orange for small text */
+  --pin:#FF4F28;
+  --good:#2E7D4F;
+  --ff-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --ff-body:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;
+  --ff-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --s-1:.875rem; --s0:1.0625rem; --s1:1.3rem; --s2:1.75rem; --s3:2.6rem; --s4:clamp(2.6rem,6.2vw,4.6rem);
+  --max:1120px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0A1724;--sheet:#102438;--ink:#E9EFF6;--muted:#9DAEC1;--rule:#22384F;
+  --accent:#FF6A45;--accent-ink:#0A1F33;--orange:#FF6A45;--orange-text:#FF8A6B;--pin:#FF6A45;--good:#6CC28E;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0A1724;--sheet:#102438;--ink:#E9EFF6;--muted:#9DAEC1;--rule:#22384F;
+  --accent:#FF6A45;--accent-ink:#0A1F33;--orange:#FF6A45;--orange-text:#FF8A6B;--pin:#FF6A45;--good:#6CC28E;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--ff-body);font-size:var(--s0);line-height:1.6;margin:0}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+a{color:var(--orange-text)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px;border-radius:2px}
+h1,h2,h3{font-family:var(--ff-display);line-height:1.05;text-wrap:balance;margin:0}
+h2{font-size:var(--s3);font-stretch:112%;font-weight:750;letter-spacing:-.01em}
+h3{font-size:var(--s1);font-stretch:100%;font-weight:700}
+p{margin:0}
+.label{font-family:var(--ff-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--ff-display);font-weight:700;font-stretch:105%;
+  font-size:1rem;padding:.85rem 1.3rem;border-radius:6px;text-decoration:none;border:2px solid var(--accent);cursor:pointer}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{background:var(--orange);border-color:var(--orange);color:#0A1F33}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--rule)}
+.btn-ghost:hover{border-color:var(--ink)}
+
+/* nav */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--paper);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.8rem}
+.brand{display:flex;align-items:center;gap:.7rem;color:var(--ink);text-decoration:none}
+.brand img{flex:none;width:52px;height:52px;border-radius:50%}
+.brand .wm{display:grid;line-height:1;font-family:var(--ff-display)}
+.brand .wm b{font-weight:500;font-stretch:115%;font-size:1.3rem;letter-spacing:.06em}
+.brand .wm i{font-style:normal;font-weight:800;font-stretch:115%;font-size:.72rem;letter-spacing:.2em;color:var(--orange-text);margin-top:.2rem}
+@media (max-width:420px){.brand .wm{display:none}}
+nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0}
+nav a{color:var(--ink);text-decoration:none;font-size:.95rem}
+nav a:hover{color:var(--orange-text)}
+@media (max-width:760px){nav ul{display:none}}
+
+/* hero */
+.hero{padding-block:clamp(2.5rem,7vw,5rem) clamp(2.5rem,6vw,4.5rem)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.hero h1{font-size:var(--s4);font-stretch:122%;font-weight:800;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero .lede{font-size:var(--s1);color:var(--muted);max-width:34ch;margin-top:1.2rem;line-height:1.45}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.hero .where{margin-top:1.6rem}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+
+/* sample audit sheet */
+.audit{background:var(--sheet);border:1px solid var(--rule);border-top:4px solid var(--orange);border-radius:10px;padding:1.4rem;min-width:0;
+  box-shadow:0 1px 0 var(--rule),0 18px 40px -28px rgba(0,0,0,.35)}
+.audit-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;border-bottom:1px dashed var(--rule);padding-bottom:.8rem}
+.query{font-family:var(--ff-mono);font-size:.9rem;background:var(--paper);border:1px solid var(--rule);border-radius:999px;padding:.5rem .9rem;margin:1rem 0 .6rem;display:flex;gap:.5rem;align-items:center;overflow-wrap:anywhere}
+.checks{list-style:none;margin:.4rem 0 0;padding:0;display:grid;gap:.15rem}
+.checks li{display:grid;grid-template-columns:1.4rem 1fr auto;gap:.5rem;align-items:baseline;padding:.45rem 0;border-bottom:1px solid var(--rule);font-size:.95rem}
+.checks li:last-child{border-bottom:0}
+.mark{font-family:var(--ff-mono);font-weight:600}
+.ok{color:var(--good)} .bad{color:var(--pin)}
+.val{font-family:var(--ff-mono);font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums;text-align:right}
+.audit-foot{margin-top:.9rem;font-size:.85rem;color:var(--muted)}
+
+/* sections */
+section{padding-block:clamp(3rem,7vw,5.5rem);border-top:1px solid var(--rule)}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 3rem;align-items:end;margin-bottom:2.5rem}
+.sec-head p{color:var(--muted);max-width:52ch}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr}}
+
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+@media (max-width:900px){.services{grid-template-columns:1fr}}
+.svc{display:flex;flex-direction:column;gap:.9rem;padding-top:1.2rem;border-top:3px solid var(--orange);min-width:0}
+.svc .tag{font-family:var(--ff-mono);font-size:.78rem;color:var(--orange-text);letter-spacing:.04em}
+.svc p{color:var(--muted)}
+.svc ul{margin:0;padding:0;list-style:none;display:grid;gap:.45rem}
+.svc li{padding-left:1.1rem;position:relative}
+.svc li::before{content:"";position:absolute;left:0;top:.62em;width:.45rem;height:.45rem;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--pin)}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;counter-reset:s;list-style:none;margin:0;padding:0}
+@media (max-width:900px){.steps{grid-template-columns:1fr}}
+.steps li{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:1.4rem;display:flex;flex-direction:column;gap:.6rem}
+.steps li::before{counter-increment:s;content:"Step " counter(s);font-family:var(--ff-mono);font-size:.78rem;color:var(--orange-text);letter-spacing:.06em;text-transform:uppercase}
+.steps p{color:var(--muted)}
+.steps .when{font-family:var(--ff-mono);font-size:.8rem;color:var(--ink);margin-top:auto;padding-top:.6rem;border-top:1px dashed var(--rule)}
+
+.why{display:grid;grid-template-columns:1fr 1fr;gap:2rem 4rem;align-items:start}
+@media (max-width:860px){.why{grid-template-columns:1fr}}
+.why blockquote{margin:0;font-family:var(--ff-display);font-stretch:110%;font-weight:650;font-size:var(--s2);line-height:1.2;text-wrap:balance}
+.why .body{display:grid;gap:1rem;color:var(--muted);max-width:58ch}
+.fit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.4rem}
+.fit span{font-size:.88rem;border:1px solid var(--rule);border-radius:999px;padding:.3rem .75rem;color:var(--ink);background:var(--sheet)}
+
+.faq{display:grid;gap:0;max-width:800px}
+.faq details{border-bottom:1px solid var(--rule);padding-block:1rem}
+.faq summary{cursor:pointer;font-family:var(--ff-display);font-weight:700;font-size:1.1rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--ff-mono);color:var(--orange-text)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--muted);margin-top:.6rem;max-width:65ch}
+
+/* contact */
+.contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,5vw,4rem);align-items:start}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+.card-person{display:grid;gap:.9rem}
+.email-row{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;font-family:var(--ff-mono);font-size:.95rem;background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:.6rem .8rem}
+.email-row span{overflow-wrap:anywhere;user-select:all;flex:1 1 12rem;min-width:0}
+.small-btn{font:inherit;font-family:var(--ff-body);font-size:.85rem;padding:.35rem .7rem;border-radius:6px;border:1px solid var(--rule);background:var(--paper);color:var(--ink);cursor:pointer}
+.small-btn:hover{border-color:var(--ink)}
+form{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:clamp(1.2rem,3vw,2rem);display:grid;gap:1.1rem;min-width:0}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media (max-width:560px){.row2{grid-template-columns:1fr}}
+.field{display:grid;gap:.35rem;min-width:0}
+.field label,fieldset legend{font-weight:700;font-size:.92rem}
+.opt{font-weight:400;color:var(--muted)}
+input[type=text],input[type=email],input[type=tel],textarea{width:100%;font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:.7rem .8rem}
+input:focus,textarea:focus{outline:2px solid var(--orange);outline-offset:0;border-color:var(--orange)}
+textarea{min-height:8rem;resize:vertical}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:.5rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chips label{display:inline-flex;gap:.45rem;align-items:center;border:1px solid var(--rule);border-radius:999px;padding:.4rem .85rem;cursor:pointer;background:var(--paper);font-size:.92rem}
+.chips input{accent-color:var(--orange)}
+.chips label:has(input:checked){border-color:var(--orange);color:var(--ink);font-weight:700;background:color-mix(in srgb,var(--orange) 10%,var(--sheet))}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-foot{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between}
+.form-foot small{color:var(--muted)}
+.status{border-radius:8px;padding:1rem;font-size:.95rem;display:grid;gap:.6rem}
+.status.ok-box{background:color-mix(in srgb,var(--good) 12%,var(--sheet));border:1px solid var(--good)}
+.status.alt-box{background:var(--paper);border:1px solid var(--rule)}
+.status pre{white-space:pre-wrap;font-family:var(--ff-mono);font-size:.82rem;margin:0;max-height:12rem;overflow:auto;background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:.7rem}
+.err{color:var(--pin);font-size:.88rem}
+
+footer{border-top:1px solid var(--rule);padding-block:2rem;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:center}
+footer .fbrand{display:flex;align-items:center;gap:1rem}
+footer img{width:84px;height:84px;border-radius:50%}
+</style>
+
+
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Anglea Strategies home">
+      <img src="logo-240.png" alt="Anglea Strategies logo" width="52" height="52">
+      <span class="wm"><b>ANGLEA</b><i>STRATEGIES</i></span>
+    </a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">How it works</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul></nav>
+    <a class="btn btn-primary" href="#contact">Get a free audit</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="label">Local SEO · Google Business Profile · App development</p>
+        <h1 style="margin-top:1rem">Be the business they find <em>first</em>.</h1>
+        <p class="lede">When someone nearby searches for what you do, your name should be at the top of the map, with the reviews, photos, and hours that get them to call. We set that up, keep it current, and build the tools that turn the call into a booking.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#contact">Request a free profile audit</a>
+          <a class="btn btn-ghost" href="#services">See services</a>
+        </div>
+        <p class="where label">Based in Hamilton, Montana · Working with businesses across the Bitterroot and beyond</p>
+      </div>
+
+      <aside class="audit" aria-label="Sample Google Business Profile audit">
+        <div class="audit-head">
+          <h3>Profile audit</h3>
+          <span class="label">Sample</span>
+        </div>
+        <div class="query"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="var(--muted)" stroke-width="2"/><path d="m11 11 4 4" stroke="var(--muted)" stroke-width="2"/></svg>plumber near Hamilton MT</div>
+        <ul class="checks">
+          <li><span class="mark ok">✓</span><span>Primary category matches the search</span><span class="val">Plumber</span></li>
+          <li><span class="mark bad">✕</span><span>Service area covers nearby towns</span><span class="val">1 of 6</span></li>
+          <li><span class="mark bad">✕</span><span>Photos added in the last 30 days</span><span class="val">0</span></li>
+          <li><span class="mark ok">✓</span><span>Hours, phone, and website correct</span><span class="val">3 / 3</span></li>
+          <li><span class="mark bad">✕</span><span>Reviews answered</span><span class="val">4 of 19</span></li>
+          <li><span class="mark bad">✕</span><span>Name and address match the website</span><span class="val">mismatch</span></li>
+        </ul>
+        <p class="audit-foot">Example of what your free audit covers. Each red item is something we fix in the first two weeks.</p>
+      </aside>
+    </div>
+  </div>
+
+  <section id="services" aria-labelledby="services-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="services-h">Three ways we grow a local business</h2>
+        <p>Pick one or combine them. Most clients start with their Google Business Profile, because it is the fastest path to more calls.</p>
+      </div>
+      <div class="services">
+        <article class="svc">
+          <span class="tag">GOOGLE BUSINESS PROFILE (GMB)</span>
+          <h3>Profile management</h3>
+          <p>Your Google listing is often the first and only thing a customer sees. We keep it complete, active, and accurate every month.</p>
+          <ul>
+            <li>Full setup, verification, or cleanup of an existing profile</li>
+            <li>Categories, services, and service area tuned to real searches</li>
+            <li>Weekly posts and fresh photos</li>
+            <li>Review requests and replies written in your voice</li>
+            <li>Monthly report: calls, direction requests, and searches</li>
+          </ul>
+        </article>
+        <article class="svc">
+          <span class="tag">SEARCH ENGINE OPTIMIZATION</span>
+          <h3>Local SEO</h3>
+          <p>We make your website the answer Google trusts for your service in your town, so you show up without paying per click.</p>
+          <ul>
+            <li>Technical audit: speed, mobile, indexing, broken pages</li>
+            <li>Service and city pages that match how people search</li>
+            <li>Consistent name, address, and phone across directories</li>
+            <li>Structured data so Google understands your business</li>
+            <li>Keyword tracking for the searches that bring you work</li>
+          </ul>
+        </article>
+        <article class="svc">
+          <span class="tag">WEB &amp; APP DEVELOPMENT</span>
+          <h3>Apps and websites</h3>
+          <p>Custom tools built for how a small business actually runs, from a fast website to the app your crew uses every day.</p>
+          <ul>
+            <li>Fast, search-friendly websites you own</li>
+            <li>Online booking and quote request forms</li>
+            <li>Scheduling, time clock, and job-tracking apps</li>
+            <li>Connections to tools like QuickBooks and Google</li>
+            <li>Ongoing hosting, updates, and support</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" aria-labelledby="process-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="process-h">How it works</h2>
+        <p>No long contracts and no jargon. You see what we found, what we changed, and what it did.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Free audit</h3><p>We review your Google profile, website, and how you rank for the searches that matter, then walk you through it on a call.</p><span class="when">Within 3 business days</span></li>
+        <li><h3>Fix the foundation</h3><p>We correct the profile, the listings, and the site issues holding you back. These changes usually bring the quickest results.</p><span class="when">First 30 days</span></li>
+        <li><h3>Grow and report</h3><p>Ongoing posts, reviews, content, and tracking, with a plain-English report each month showing calls and rankings.</p><span class="when">Month to month</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section aria-labelledby="why-h">
+    <div class="wrap why">
+      <div>
+        <p class="label" id="why-h">Why Anglea Strategies</p>
+        <blockquote style="margin-top:1rem">We run local service businesses ourselves, so we build what brings in real customers.</blockquote>
+      </div>
+      <div class="body">
+        <p>Our marketing and software come from running crews, answering the phone, and booking jobs here in the valley. We know which searches turn into calls and which ones never do.</p>
+        <p>You work directly with the person doing the work. No account managers and no handoffs.</p>
+        <p class="label" style="margin-top:.6rem">Good fit for</p>
+        <div class="fit">
+          <span>Cleaning &amp; janitorial</span><span>Trades &amp; contractors</span><span>Home services</span><span>Restaurants &amp; shops</span><span>Professional offices</span><span>Outfitters &amp; lodging</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="faq-h">Common questions</h2><p></p></div>
+      <div class="faq">
+        <details><summary>Is GMB the same as Google Business Profile?</summary><p>Yes. Google renamed Google My Business (GMB) to Google Business Profile. It is the listing that shows up on Google Maps and in the map results at the top of a local search.</p></details>
+        <details><summary>How long until I see results?</summary><p>Profile fixes often show up in calls and direction requests within a few weeks. SEO for your website builds over a few months. We report on both every month so you can see the trend.</p></details>
+        <details><summary>Do I have to sign a long contract?</summary><p>No. Ongoing work is month to month. Websites and apps are quoted as a project before we start.</p></details>
+        <details><summary>Do you only work with businesses in Montana?</summary><p>We are based in Hamilton and focus on local businesses in the Bitterroot and western Montana, but we work with service businesses anywhere.</p></details>
+        <details><summary>Will I own my website and app?</summary><p>Yes. You own your domain, your content, your Google profile, and the code we build for you.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-h">
+    <div class="wrap contact">
+      <div class="card-person">
+        <h2 id="contact-h">Start with a free audit</h2>
+        <p style="color:var(--muted);max-width:42ch">Tell us about your business and what you want more of. Ethan will reply within one business day, or call or text him at (406) 360-9604.</p>
+        <div>
+          <p class="label">Contact</p>
+          <p style="font-family:var(--ff-display);font-weight:700;font-size:1.25rem;margin-top:.3rem">Ethan</p>
+          <p style="color:var(--muted)">Anglea Strategies · Hamilton, MT</p>
+        </div>
+        <div class="email-row">
+          <span id="phone-text">(406) 360-9604</span>
+          <button type="button" class="small-btn" id="copy-phone">Copy</button>
+        </div>
+        <div class="email-row">
+          <span id="email-text">angleastratgies@gmail.com</span>
+          <button type="button" class="small-btn" id="copy-email">Copy</button>
+        </div>
+        <p style="font-size:.9rem;color:var(--muted)"><a href="tel:+14063609604">Call or text</a> · <a href="mailto:angleastratgies@gmail.com">Email</a></p>
+      </div>
+
+      <form id="contact-form" novalidate>
+        <div class="row2">
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="f-biz">Business name</label><input id="f-biz" name="business" type="text" autocomplete="organization" required></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="f-phone">Phone <span class="opt">(optional)</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <fieldset>
+          <legend>What can we help with?</legend>
+          <div class="chips">
+            <label><input id="f-svc-gbp" type="checkbox" name="services" value="Google Business Profile" checked> Google Business Profile</label>
+            <label><input id="f-svc-seo" type="checkbox" name="services" value="Local SEO"> Local SEO</label>
+            <label><input id="f-svc-app" type="checkbox" name="services" value="Website or app"> Website or app</label>
+          </div>
+        </fieldset>
+        <div class="field"><label for="f-msg">Tell us about your business</label><textarea id="f-msg" name="message" placeholder="What you do, where you work, and what you want more of."></textarea></div>
+        <input class="hp" type="text" name="_honey" id="f-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="err" id="form-err" hidden></p>
+        <div class="form-foot">
+          <small>We never share your information.</small>
+          <button class="btn btn-primary" type="submit" id="f-submit">Send request</button>
+        </div>
+        <div class="status" id="form-status" hidden aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="fbrand"><img src="logo-240.png" alt="" width="84" height="84"><span>© <span id="yr">2026</span> Anglea Strategies LLC<br>Hamilton, Montana · <a href="tel:+14063609604">(406) 360-9604</a><br><a href="https://angleastrategies.com">angleastrategies.com</a></span></span>
+    <span>Local SEO · Google Business Profile management · App development</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var EMAIL = "angleastratgies@gmail.com";
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  function copyText(text, btn){
+    var done = function(){ var t = btn.textContent; btn.textContent = "Copied"; setTimeout(function(){ btn.textContent = t; }, 1600); };
+    try {
+      navigator.clipboard.writeText(text).then(done, function(){ selectFallback(); });
+    } catch(e){ selectFallback(); }
+    function selectFallback(){
+      var el = btn.previousElementSibling;
+      if (!el) return;
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = "Selected";
+    }
+  }
+  document.getElementById("copy-email").addEventListener("click", function(){ copyText(EMAIL, this); });
+  document.getElementById("copy-phone").addEventListener("click", function(){ copyText("(406) 360-9604", this); });
+
+  var form = document.getElementById("contact-form");
+  var err = document.getElementById("form-err");
+  var status = document.getElementById("form-status");
+  var submit = document.getElementById("f-submit");
+
+  function val(id){ return document.getElementById(id).value.trim(); }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    err.hidden = true; status.hidden = true;
+    if (val("f-hp")) return; // spam bot
+    var name = val("f-name"), biz = val("f-biz"), email = val("f-email");
+    var missing = [];
+    if (!name) missing.push("your name");
+    if (!biz) missing.push("your business name");
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) missing.push("a valid email");
+    if (missing.length){ err.textContent = "Please add " + missing.join(", ") + "."; err.hidden = false; return; }
+
+    var services = Array.prototype.slice.call(form.querySelectorAll('input[name="services"]:checked')).map(function(i){ return i.value; });
+    var data = {
+      name: name, business: biz, email: email, phone: val("f-phone") || "—",
+      services: services.join(", ") || "Not specified", message: val("f-msg") || "—",
+      _subject: "New audit request: " + biz, _template: "table", _captcha: "false"
+    };
+
+    submit.disabled = true; submit.textContent = "Sending…";
+    fetch("https://formsubmit.co/ajax/" + EMAIL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(data)
+    }).then(function(r){ return r.json(); }).then(function(j){
+      if (j && (j.success === true || j.success === "true")) {
+        status.className = "status ok-box";
+        status.innerHTML = "<strong>Request sent.</strong><span>Thanks, " + escapeHtml(name.split(" ")[0]) + ". Ethan will reply to " + escapeHtml(email) + " within one business day.</span>";
+        status.hidden = false; form.reset();
+      } else { throw new Error("not sent"); }
+    }).catch(function(){
+      // Could not reach the form service (for example in a preview). Offer the message to send by email.
+      var body = "Name: " + data.name + "\nBusiness: " + data.business + "\nEmail: " + data.email + "\nPhone: " + data.phone + "\nInterested in: " + data.services + "\n\n" + data.message;
+      status.className = "status alt-box";
+      status.innerHTML = "<strong>The form could not send from here.</strong><span>Copy your message and email it to " + EMAIL + ", or call (406) 360-9604.</span><pre id=\"compose\"></pre><div style=\"display:flex;gap:.5rem;flex-wrap:wrap\"><button type=\"button\" class=\"small-btn\" id=\"copy-msg\">Copy message</button><a class=\"small-btn\" style=\"text-decoration:none\" href=\"mailto:" + EMAIL + "?subject=" + encodeURIComponent(data._subject) + "&body=" + encodeURIComponent(body) + "\">Open in email app</a></div>";
+      status.querySelector("#compose").textContent = body;
+      status.hidden = false;
+      document.getElementById("copy-msg").addEventListener("click", function(){
+        var btn = this;
+        try { navigator.clipboard.writeText(body).then(function(){ btn.textContent = "Copied"; }, function(){ sel(); }); } catch(e){ sel(); }
+        function sel(){ var r = document.createRange(); r.selectNodeContents(status.querySelector("#compose")); var s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = "Selected"; }
+      });
+    }).finally(function(){ submit.disabled = false; submit.textContent = "Send request"; });
+  });
+
+  function escapeHtml(s){ return s.replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+})();
+</script>
+
+</body>
+</html>
