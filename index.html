@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Anglea Strategies","url":"https://angleastrategies.com","logo":"https://angleastrategies.com/logo.png","description":"Local SEO, Google Business Profile management, and app development for small businesses.","email":"angleastrategies@gmail.com","telephone":"+1-406-360-9604","address":{"@type":"PostalAddress","addressLocality":"Hamilton","addressRegion":"MT","addressCountry":"US"},"areaServed":["Bitterroot Valley","Missoula","Montana"],"founder":{"@type":"Person","name":"Ethan"},"knowsAbout":["Local SEO","Google Business Profile","App development"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Anglea Strategies","legalName":"Anglea Strategies LLC","url":"https://angleastrategies.com","logo":"https://angleastrategies.com/logo.png","description":"Local SEO, Google Business Profile management, and app development for small businesses.","email":"info@angleastrategies.com","telephone":"+1-406-360-9604","address":{"@type":"PostalAddress","streetAddress":"201 Adirondac Ave","postalCode":"59840","addressLocality":"Hamilton","addressRegion":"MT","addressCountry":"US"},"areaServed":["Bitterroot Valley","Missoula","Montana"],"founder":{"@type":"Person","name":"Ethan"},"knowsAbout":["Local SEO","Google Business Profile","App development"]}
 </script>
 <style>
 /* Layout: a field-survey page. Wide headline left, a "sample audit" sheet right; services as three
@@ -165,6 +165,11 @@ fieldset{border:0;margin:0;padding:0;display:grid;gap:.5rem}
 .chips input{accent-color:var(--orange)}
 .chips label:has(input:checked){border-color:var(--orange);color:var(--ink);font-weight:700;background:color-mix(in srgb,var(--orange) 10%,var(--sheet))}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.consent{display:grid;gap:.6rem;border-top:1px dashed var(--rule);padding-top:1rem}
+.consent label{display:grid;grid-template-columns:1.2rem 1fr;gap:.6rem;align-items:start;font-size:.86rem;line-height:1.5;color:var(--muted);cursor:pointer}
+.consent input{margin-top:.25rem;accent-color:var(--orange);width:1rem;height:1rem}
+.consent strong{color:var(--ink)}
+.legal-links{display:flex;flex-wrap:wrap;gap:1rem}
 .form-foot{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between}
 .form-foot small{color:var(--muted)}
 .status{border-radius:8px;padding:1rem;font-size:.95rem;display:grid;gap:.6rem}
@@ -329,17 +334,17 @@ footer img{width:84px;height:84px;border-radius:50%}
         <div>
           <p class="label">Contact</p>
           <p style="font-family:var(--ff-display);font-weight:700;font-size:1.25rem;margin-top:.3rem">Ethan</p>
-          <p style="color:var(--muted)">Anglea Strategies · Hamilton, MT</p>
+          <p style="color:var(--muted)">Anglea Strategies LLC<br>201 Adirondac Ave, Hamilton, MT 59840</p>
         </div>
         <div class="email-row">
           <span id="phone-text">(406) 360-9604</span>
           <button type="button" class="small-btn" id="copy-phone">Copy</button>
         </div>
         <div class="email-row">
-          <span id="email-text">angleastrategies@gmail.com</span>
+          <span id="email-text">info@angleastrategies.com</span>
           <button type="button" class="small-btn" id="copy-email">Copy</button>
         </div>
-        <p style="font-size:.9rem;color:var(--muted)"><a href="tel:+14063609604">Call or text</a> · <a href="mailto:angleastrategies@gmail.com">Email</a></p>
+        <p style="font-size:.9rem;color:var(--muted)"><a href="tel:+14063609604">Call or text</a> · <a href="mailto:info@angleastrategies.com">Email</a></p>
       </div>
 
       <form id="contact-form" novalidate>
@@ -361,6 +366,11 @@ footer img{width:84px;height:84px;border-radius:50%}
         </fieldset>
         <div class="field"><label for="f-msg">Tell us about your business</label><textarea id="f-msg" name="message" placeholder="What you do, where you work, and what you want more of."></textarea></div>
         <input class="hp" type="text" name="_honey" id="f-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="consent">
+          <label for="f-sms-care"><input id="f-sms-care" name="sms_customer_care" type="checkbox" value="yes"><span><strong>Text me about my request (optional).</strong> I agree to receive text messages from Anglea Strategies LLC at the phone number provided about my inquiry, appointment scheduling and reminders, and project updates. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase.</span></label>
+          <label for="f-sms-mkt"><input id="f-sms-mkt" name="sms_marketing" type="checkbox" value="yes"><span><strong>Send me tips and offers by text (optional).</strong> I agree to receive occasional marketing text messages from Anglea Strategies LLC at the phone number provided, up to 4 messages per month. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase.</span></label>
+          <small style="color:var(--muted)">See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms &amp; SMS Terms</a>. We never sell or share your phone number or text consent with third parties for marketing.</small>
+        </div>
         <p class="err" id="form-err" hidden></p>
         <div class="form-foot">
           <small>We never share your information.</small>
@@ -374,14 +384,14 @@ footer img{width:84px;height:84px;border-radius:50%}
 
 <footer>
   <div class="wrap">
-    <span class="fbrand"><img src="logo-240.png" alt="" width="84" height="84"><span>© <span id="yr">2026</span> Anglea Strategies LLC<br>Hamilton, Montana · <a href="tel:+14063609604">(406) 360-9604</a><br><a href="https://angleastrategies.com">angleastrategies.com</a></span></span>
-    <span>Local SEO · Google Business Profile management · App development</span>
+    <span class="fbrand"><img src="logo-240.png" alt="" width="84" height="84"><span>© <span id="yr">2026</span> Anglea Strategies LLC<br>201 Adirondac Ave, Hamilton, MT 59840<br><a href="tel:+14063609604">(406) 360-9604</a> · <a href="mailto:info@angleastrategies.com">info@angleastrategies.com</a></span></span>
+    <span class="legal-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; SMS Terms</a></span>
   </div>
 </footer>
 
 <script>
 (function(){
-  var EMAIL = "angleastrategies@gmail.com";
+  var EMAIL = "info@angleastrategies.com";
   document.getElementById("yr").textContent = new Date().getFullYear();
 
   function copyText(text, btn){
@@ -418,10 +428,14 @@ footer img{width:84px;height:84px;border-radius:50%}
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) missing.push("a valid email");
     if (missing.length){ err.textContent = "Please add " + missing.join(", ") + "."; err.hidden = false; return; }
 
+    var smsCare = document.getElementById("f-sms-care").checked, smsMkt = document.getElementById("f-sms-mkt").checked;
+    if ((smsCare || smsMkt) && !val("f-phone")) { err.textContent = "Please add your phone number so we can text you, or uncheck the text message boxes."; err.hidden = false; return; }
     var services = Array.prototype.slice.call(form.querySelectorAll('input[name="services"]:checked')).map(function(i){ return i.value; });
     var data = {
       name: name, business: biz, email: email, phone: val("f-phone") || "—",
       services: services.join(", ") || "Not specified", message: val("f-msg") || "—",
+      sms_customer_care_consent: smsCare ? "YES - agreed " + new Date().toISOString() : "No",
+      sms_marketing_consent: smsMkt ? "YES - agreed " + new Date().toISOString() : "No",
       _subject: "New audit request: " + biz, _template: "table", _captcha: "false"
     };
 
@@ -438,7 +452,7 @@ footer img{width:84px;height:84px;border-radius:50%}
       } else { throw new Error((j && j.message) || "not sent"); }
     }).catch(function(e){
       // Could not reach the form service (for example in a preview). Offer the message to send by email.
-      var body = "Name: " + data.name + "\nBusiness: " + data.business + "\nEmail: " + data.email + "\nPhone: " + data.phone + "\nInterested in: " + data.services + "\n\n" + data.message;
+      var body = "Name: " + data.name + "\nBusiness: " + data.business + "\nEmail: " + data.email + "\nPhone: " + data.phone + "\nInterested in: " + data.services + "\nText updates: " + data.sms_customer_care_consent + "\nMarketing texts: " + data.sms_marketing_consent + "\n\n" + data.message;
       status.className = "status alt-box";
       var why = (e && e.message && e.message !== "not sent" && !/fetch|network|load/i.test(e.message)) ? "<span>" + escapeHtml(e.message) + "</span>" : "";
       status.innerHTML = "<strong>The form could not send from here.</strong>" + why + "<span>Copy your message and email it to " + EMAIL + ", or call (406) 360-9604.</span><pre id=\"compose\"></pre><div style=\"display:flex;gap:.5rem;flex-wrap:wrap\"><button type=\"button\" class=\"small-btn\" id=\"copy-msg\">Copy message</button><a class=\"small-btn\" style=\"text-decoration:none\" href=\"mailto:" + EMAIL + "?subject=" + encodeURIComponent(data._subject) + "&body=" + encodeURIComponent(body) + "\">Open in email app</a></div>";
